@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="overlay">
+            <form action="" method="post" id="login-form">
+                <h1>Login</h1>
+                <div class="info-log">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" autocomplete="email" required>
+
+                    <label for="password">Password</label>
+                    <div class="password-wrap">
+                        <input type="password" name="password" id="password" placeholder="Enter your password" autocomplete="current-password" required>
+                        <button type="button" class="toggle-password" data-target="password" aria-label="Show password">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="forgot"><a href="#">Forgot password?</a></div>
+
+                    <input type="submit" value="Log In" id="submit">
+
+                    <div class="social-icons">
+                        <a href="#" class="facebook" aria-label="Continue with Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="twitter" aria-label="Continue with Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="google" aria-label="Continue with Google"><i class="fa-brands fa-google"></i></a>
+                    </div>
+                    <p>Don't have an account? <a href="index.html">Create an account</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

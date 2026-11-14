@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #FEF3E2;
+    --secondary-color: #868f9b31;
+    --button-color: #F4AE52;
+    --text-color: #2A1A0E;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+}
+main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0b1220; /* لون احتياطي لحد ما الصورة تحمّل */
+    background-image: image-set(
+        url('../img/bg.webp') type('image/webp'),
+        url('../img/bg.jpg') type('image/jpeg')
+    );
+    background-size: cover;
+    background-position: center;
+}
+.overlay{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(134, 143, 155, 0.223);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+}
+form{
+    width: 400px;
+    max-width: 90%;
+    background-color: var(--main-color);
+    border-radius: 28px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+}
+h1{
+    text-align: center;
+    text-transform: capitalize;
+    margin: 10px;
+}
+.info-log{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+label{
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-left: 5%;
+}
+input{
+    display: flex;
+    width: 90%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 auto;
+    font-family: inherit;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+input:focus{
+    outline: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+    background-color: var(--secondary-color);
+}
+input[type="submit"]{
+    background-color: var(--text-color);
+    color: var(--main-color);
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+input[type="submit"]:hover{
+    background-color: var(--button-color);
+    color: var(--text-color);
+    scale: 1.02;
+}
+
+/* حقل الباسورد + زرار العين */
+.password-wrap{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+.password-wrap input{
+    width: 100%;
+    padding-right: 45px;
+}
+.toggle-password{
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+.toggle-password:hover{ color: var(--button-color); }
+
+.forgot{
+    text-align: right;
+    padding-right: 5%;
+    font-size: 0.85rem;
+}
+
+/* اللينكات */
+a{
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+a:hover{ color: var(--button-color); }
+
+p{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+.error{
+    color: #b3261e;
+    font-size: 0.8rem;
+    padding-left: 5%;
+    min-height: 1em;
+}
+
+/* السوشيال */
+.social-icons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+.social-icons a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.facebook{ background-color: #4267B2; }
+.twitter{ background-color: #55ACEE; }
+.google{ background-color: #DB4437; }
+.social-icons a:hover{
+    transform: scale(1.1);
+    color: white;
+}
+
+/* إخفاء زرار العين الافتراضي بتاع Edge/IE عشان ما يتكررش مع بتاعنا */
+input::-ms-reveal,
+input::-ms-clear{
+    display: none;
+}
